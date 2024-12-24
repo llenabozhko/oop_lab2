@@ -44,10 +44,30 @@ namespace oop_lab2
 
             }
 
-
             return new Matrix(result);
         }
 
+        private double[,] GetTransponedArray()
+        {
+            double[,] transposed = new double[Width, Height];
+            for (int i = 0; i < Height; i++)
+            {
+                for (int j = 0; j < Width; j++)
+                {
+                    transposed[j, i] = data[i, j];
+                }
+            }
+              
+            return transposed;
+        }
 
+        public Matrix GetTransponedCopy()
+        {
+            return new(GetTransponedArray());
+        }
+        public void TransponeMe()
+        {
+            data = GetTransponedArray();
+        }
     }
 }

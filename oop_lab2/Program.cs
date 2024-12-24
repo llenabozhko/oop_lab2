@@ -9,8 +9,7 @@
             {1, 7, 2, 4},
             {3, 1, 8, 2},
             {2, 4, 1, 6}
-        });
-
+            });
             Matrix b = new Matrix("5 2\n 3 1\n6 4\n 2 5");
             Matrix c = new Matrix("-3 1\n 0 22\n6 44\n -2 1");
 
@@ -28,6 +27,14 @@
             Matrix product = a * b;
             Console.WriteLine("Matrix A * B:");
             Console.WriteLine(product);
+
+            Matrix transposed = a.GetTransponedCopy();
+            Console.WriteLine("Transposed Matrix A:");
+            Console.WriteLine(transposed);
+
+            transposed.TransponeMe();
+            Console.WriteLine("Twice transposed Matrix A:");
+            Console.WriteLine(transposed);
 
 
         }

@@ -6,7 +6,10 @@ namespace oop_lab2
     {
         private double[,] data;
 
-        public Matrix(double[,] arr) => data = (double[,])arr.Clone();
+        public Matrix(double[,] arr)
+        {
+            data = (double[,])arr.Clone();
+        }
         public Matrix(double[][] arr)
         {
             if (arr == null || arr.Length == 0 || arr[0] == null)
@@ -28,7 +31,10 @@ namespace oop_lab2
 
             data = new double[rows, cols];
             for (int i = 0; i < rows; i++)
+            {
                 Array.Copy(arr[i], 0, data, i * cols, cols);
+
+            }
         }
         public Matrix(string[] arr)
         {
