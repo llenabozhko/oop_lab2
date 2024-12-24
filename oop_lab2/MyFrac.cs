@@ -49,11 +49,19 @@ namespace oop_lab2
             long fractionalPart = Math.Abs(Nominator) % Denominator;
 
             if (integerPart == 0)
+            {
                 return $"{sign}{fractionalPart}/{Denominator}";
+
+            }
             else if (fractionalPart == 0)
+            {
                 return $"{sign}{integerPart}";
+
+            }
             else
+            {
                 return $"{sign}{integerPart} + {fractionalPart}/{Denominator}";
+            }
         }
 
         public double ToDouble()
