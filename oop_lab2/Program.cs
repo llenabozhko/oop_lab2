@@ -22,8 +22,13 @@
             Console.WriteLine(c);
 
             Matrix plus = b + c;
-            Console.WriteLine($"Matrix B+C:");
+            Console.WriteLine($"Matrix B + C:");
             Console.WriteLine(plus);
+
+            Matrix product = a * b;
+            Console.WriteLine("Matrix A * B:");
+            Console.WriteLine(product);
+
 
         }
     }
